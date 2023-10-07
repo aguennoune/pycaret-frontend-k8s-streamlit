@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-model = load_model('./model/transformation_pipeline_and_model')
+model = load_model('./model/best_gbr_for_deployment.pkl')
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
