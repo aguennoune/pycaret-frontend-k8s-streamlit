@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/71ec603fc9db45ab95a63252a1ca021e/artifacts
+end_time: 1696303077393
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 71ec603fc9db45ab95a63252a1ca021e
+run_name: Decision Tree Regressor
+run_uuid: 71ec603fc9db45ab95a63252a1ca021e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696303077353
+status: 3
+tags: []
+user_id: aguennoune_17

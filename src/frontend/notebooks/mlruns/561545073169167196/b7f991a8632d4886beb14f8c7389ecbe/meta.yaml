@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/b7f991a8632d4886beb14f8c7389ecbe/artifacts
+end_time: 1696294689631
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: b7f991a8632d4886beb14f8c7389ecbe
+run_name: Lasso Least Angle Regression
+run_uuid: b7f991a8632d4886beb14f8c7389ecbe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696294689577
+status: 3
+tags: []
+user_id: aguennoune_17

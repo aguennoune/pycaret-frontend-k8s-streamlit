@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/675de516820442ea84ddc982cd021c81/artifacts
+end_time: 1696294690084
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 675de516820442ea84ddc982cd021c81
+run_name: Lasso Regression
+run_uuid: 675de516820442ea84ddc982cd021c81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696294690040
+status: 3
+tags: []
+user_id: aguennoune_17

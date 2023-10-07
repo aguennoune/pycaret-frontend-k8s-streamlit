@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/7de8550b48e3414e95f569f6cbc813d2/artifacts
+end_time: 1696304850359
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 7de8550b48e3414e95f569f6cbc813d2
+run_name: Light Gradient Boosting Machine
+run_uuid: 7de8550b48e3414e95f569f6cbc813d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696304850316
+status: 3
+tags: []
+user_id: aguennoune_17

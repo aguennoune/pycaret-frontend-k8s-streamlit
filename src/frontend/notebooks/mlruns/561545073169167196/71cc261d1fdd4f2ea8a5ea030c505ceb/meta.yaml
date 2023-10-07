@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/71cc261d1fdd4f2ea8a5ea030c505ceb/artifacts
+end_time: 1696300869830
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 71cc261d1fdd4f2ea8a5ea030c505ceb
+run_name: AdaBoost Regressor
+run_uuid: 71cc261d1fdd4f2ea8a5ea030c505ceb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696300869488
+status: 3
+tags: []
+user_id: aguennoune_17

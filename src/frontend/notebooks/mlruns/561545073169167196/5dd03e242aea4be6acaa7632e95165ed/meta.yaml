@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/5dd03e242aea4be6acaa7632e95165ed/artifacts
+end_time: 1696299985296
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 5dd03e242aea4be6acaa7632e95165ed
+run_name: Linear Regression
+run_uuid: 5dd03e242aea4be6acaa7632e95165ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696299984954
+status: 3
+tags: []
+user_id: aguennoune_17

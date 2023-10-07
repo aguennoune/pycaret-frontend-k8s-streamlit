@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/c5bf66f1cdc548b1bb3962afbf80cc34/artifacts
+end_time: 1696303077945
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: c5bf66f1cdc548b1bb3962afbf80cc34
+run_name: Orthogonal Matching Pursuit
+run_uuid: c5bf66f1cdc548b1bb3962afbf80cc34
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696303077904
+status: 3
+tags: []
+user_id: aguennoune_17

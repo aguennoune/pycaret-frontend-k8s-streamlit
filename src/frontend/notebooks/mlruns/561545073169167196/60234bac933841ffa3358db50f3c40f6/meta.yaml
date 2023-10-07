@@ -1,0 +1,15 @@
+artifact_uri: file:///home/aguennoune_17/src/clickup/person/code_with_moez_ali/notebooks/mlruns/561545073169167196/60234bac933841ffa3358db50f3c40f6/artifacts
+end_time: 1696303075579
+entry_point_name: ''
+experiment_id: '561545073169167196'
+lifecycle_stage: active
+run_id: 60234bac933841ffa3358db50f3c40f6
+run_name: Random Forest Regressor
+run_uuid: 60234bac933841ffa3358db50f3c40f6
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1696303075535
+status: 3
+tags: []
+user_id: aguennoune_17
