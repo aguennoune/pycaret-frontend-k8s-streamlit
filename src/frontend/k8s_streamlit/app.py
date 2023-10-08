@@ -1,10 +1,9 @@
-from pycaret.regression import predict_model
+from pycaret.regression import load_model, predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
-import joblib
 
-model = joblib.load('./model/insurance_gbr_model_23122020.pkl')
+model = load_model('insurance_gbr_model_23122020')
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
@@ -14,8 +13,8 @@ def predict(model, input_df):
 def run():
 
     from PIL import Image
-    image = Image.open('../images/logo.png')
-    image_hospital = Image.open('../images/hospital.jpg')
+    image = Image.open('logo.png')
+    image_hospital = Image.open('hospital.jpg')
 
     st.image(image,use_column_width=False)
 
