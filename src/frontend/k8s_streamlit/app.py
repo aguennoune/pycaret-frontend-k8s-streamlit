@@ -1,9 +1,10 @@
-from pycaret.regression import load_model, predict_model
+from pycaret.regression import predict_model
 import streamlit as st
 import pandas as pd
 import numpy as np
+import joblib
 
-model = load_model('./model/best_gbr_for_deployment.pkl')
+model = joblib.load('./model/insurance_gbr_model_23122020.pkl')
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
