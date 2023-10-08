@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import joblib
 
-model = joblib.load('../model/insurance_gbr_model_23122020.pkl')
+model = joblib.load('./model/insurance_gbr_model_23122020.pkl')
 
 def predict(model, input_df):
     predictions_df = predict_model(estimator=model, data=input_df)
