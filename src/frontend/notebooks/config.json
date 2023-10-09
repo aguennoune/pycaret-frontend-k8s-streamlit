@@ -1,0 +1,26 @@
+[
+    {
+        "role": "user",
+        "content": "--ip=127.0.0.1",
+        "data": {
+            "age": 32,
+            "sex": "male",
+            "bmi": 28.88,
+            "children": 0,
+            "smoker": true,
+            "region": "southeast"
+        }
+    },
+    {
+        "role": "user",
+        "content": "--ip=127.0.0.1",
+        "data": {
+            "age": 32,
+            "sex": "male",
+            "bmi": 28.88,
+            "children": 0,
+            "smoker": true,
+            "region": "southeast"
+        }
+    }
+]
