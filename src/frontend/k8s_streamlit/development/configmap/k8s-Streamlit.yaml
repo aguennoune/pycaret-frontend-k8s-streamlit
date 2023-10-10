@@ -6,9 +6,12 @@ metadata:
 data:
   conf.json: |
     {
-      "general": {
-        "showWarningOnDirectExecution": false
-      }
+      "age": 32,
+      "sex": "male",
+      "bmi": 28.880,
+      "children": 0,
+      "smoker": yes,
+      "region": "northwest"
     }
 ---
 apiVersion: apps/v1
