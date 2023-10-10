@@ -2,6 +2,8 @@
 
 
 ```bash
+cd ./src/frontend/k8s_streamlit
+
 docker run --rm -it \
 -v ${PWD}:/app \
 -w /app \
