@@ -1,0 +1,87 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: streamlit-configmap
+  namespace: ns-streamlit
+data:
+  conf.json: |
+    {
+      "general": {
+        "showWarningOnDirectExecution": false
+      }
+    }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-deployment
+  namespace: ns-streamlit
+  labels:
+    app: streamlit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: streamlit
+  template:
+    metadata:
+      labels:
+        app: streamlit
+    spec:
+      initContainers:
+      - name: git-clone
+        image: alpine/git
+        command: ["/bin/sh", "-c"]
+        args:
+        - |
+          apk add --no-cache git && \
+          git clone --single-branch --depth 1 https://github.com/aguennoune/pycaret-frontend-k8s-streamlit.git /tmp/app && \
+          cd /tmp/app && \
+          pip install -r src/frontend/k8s_streamlit/requirements.txt && \
+          chmod 644 src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl
+        volumeMounts:
+        - mountPath: /app
+          name: streamlit-volume
+        - mountPath: /tmp/app
+          name: app-volume
+      containers:
+      - image: aguennoune/pycaret-k8s-streamlit:1.10.0
+        imagePullPolicy: Always
+        name: streamlit
+        ports:
+        - containerPort: 8501
+          protocol: TCP
+          name: http
+        command: ["streamlit", "run", "/tmp/app/src/frontend/k8s_streamlit/app.py", "--server.port=8501", "--server.address=127.0.0.1"]
+        volumeMounts:
+        - mountPath: /tmp/app
+          name: streamlit-volume
+        - mountPath: /tmp/app/src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl
+          name: streamlit-volume
+          subPath: insurance_gbr_model_23122020.pkl
+      imagePullSecrets:
+      - name: registry-credentials
+      volumes:
+      - name: streamlit-volume
+        configMap:
+          name: streamlit-configmap
+      - name: app-volume
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: streamlit
+  name: streamlit-service
+  namespace: ns-streamlit
+spec:
+  ports:
+  - name: http
+    nodePort: 30001
+    port: 8501
+    targetPort: http
+    protocol: TCP
+  selector:
+    app: streamlit
+  type: NodePort
