@@ -33,7 +33,7 @@ spec:
     spec:
       initContainers:
       - name: git-clone
-        image: alpine/git
+        image: alpine/git:2.40.1
         command: ["/bin/sh", "-c"]
         args:
         - |
