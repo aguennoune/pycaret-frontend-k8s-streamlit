@@ -38,14 +38,14 @@ spec:
         args:
         - |
           apk add --no-cache git && \
-          git clone --single-branch --depth 1 https://github.com/aguennoune/pycaret-frontend-k8s-streamlit.git /tmp/app && \
-          cd /tmp/app && \
+          git clone --single-branch --depth 1 https://github.com/aguennoune/pycaret-frontend-k8s-streamlit.git /app && \
+          cd /app && \
           pip install -r src/frontend/k8s_streamlit/requirements.txt && \
           chmod 644 src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl
         volumeMounts:
         - mountPath: /app
           name: streamlit-volume
-        - mountPath: /tmp/app
+        - mountPath: /app
           name: app-volume
       containers:
       - image: aguennoune/pycaret-k8s-streamlit:1.10.0
@@ -57,9 +57,9 @@ spec:
           name: http
         command: ["streamlit", "run", "/tmp/app/src/frontend/k8s_streamlit/app.py", "--server.port=8501", "--server.address=127.0.0.1"]
         volumeMounts:
-        - mountPath: /tmp/app
+        - mountPath: /app
           name: streamlit-volume
-        - mountPath: /tmp/app/src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl
+        - mountPath: /app/src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl
           name: streamlit-volume
           subPath: insurance_gbr_model_23122020.pkl
       imagePullSecrets:
@@ -87,4 +87,4 @@ spec:
     protocol: TCP
   selector:
     app: streamlit
-  type: NodePort
+  type: ClusterIP
