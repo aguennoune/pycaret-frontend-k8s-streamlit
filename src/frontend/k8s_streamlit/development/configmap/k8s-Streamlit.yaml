@@ -55,7 +55,7 @@ spec:
         - containerPort: 8501
           protocol: TCP
           name: http
-        command: ["streamlit", "run", "/tmp/app/src/frontend/k8s_streamlit/app.py", "--server.port=8501", "--server.address=127.0.0.1"]
+        command: ["streamlit", "run", "/app/src/frontend/k8s_streamlit/app.py", "--server.port=8501", "--server.address=127.0.0.1"]
         volumeMounts:
         - mountPath: /app
           name: streamlit-volume
@@ -74,12 +74,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: streamlit-svc
+  name: streamlit-service
   labels:
     app: streamlit
   namespace: ns-streamlit
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: streamlit
   ports:
