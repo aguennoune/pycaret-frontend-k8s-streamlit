@@ -82,8 +82,8 @@ spec:
   ports:
   - name: http
     nodePort: 30001
-    port: 8501
-    targetPort: http
+    port: 80
+    targetPort: 8501
     protocol: TCP
   selector:
     app: streamlit
