@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  frontend: # `docker run -it -p 8501:8501 -v ${PWD}/src/frontend/k8s_streamlit:/app aguennoune/pycaret-k8s-streamlit:1.10.0 app.py
+    container_name: insurance-regression-frontend-container
+    image: aguennoune/pycaret-k8s-streamlit:1.10.0
+    build:
+      context: ./src/frontend/k8s_streamlit
+    working_dir: /app
+    # entrypoint: /bin/sh
+    entrypoint: ["streamlit", "run", "app.py"]
+    command: ["--server.port", "8501", "--server.address", "0.0.0.0", "--server.headless", "true", "--server.enableCORS", "false"]
+    # stdin_open: true
+    # tty: true
+    volumes:
+    - ./src/frontend/k8s_streamlit:/app
+    - ./src/frontend/k8s_streamlit/insurance_gbr_model_23122020.pkl:/app
+    ports:
+      - 8501:8501
