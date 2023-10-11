@@ -45,8 +45,6 @@ spec:
         volumeMounts:
         - mountPath: /app
           name: streamlit-volume
-        - mountPath: /app
-          name: app-volume
       containers:
       - image: aguennoune/pycaret-k8s-streamlit:1.10.0
         imagePullPolicy: Always
@@ -68,8 +66,6 @@ spec:
       - name: streamlit-volume
         configMap:
           name: streamlit-configmap
-      - name: app-volume
-        emptyDir: {}
 ---
 apiVersion: v1
 kind: Service
